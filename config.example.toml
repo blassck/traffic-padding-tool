@@ -1,0 +1,29 @@
+[server]
+port = 8443
+uri = "/pad"
+metrics = true
+log_level = "info"  # debug, info, warn, error
+
+[network]
+iface = "eth0"
+sample_interval = 1.0
+smooth_window = 1.5
+
+[proxy]
+threshold = 100.0   # KB/s
+exit_time = 10      # seconds
+ratio = 2.0
+maxspeed = 10000.0  # KB/s
+minspeed = 100.0    # KB/s (optional)
+
+[idle]
+smin = 50
+smax = 200
+tmin = 5
+tmax = 30
+pmin = 10
+pmax = 60
+
+[auth]
+enabled = false
+# client_cert = "/path/to/ca.crt"  # Required if enabled=true

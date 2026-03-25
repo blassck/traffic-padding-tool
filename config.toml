@@ -1,0 +1,28 @@
+[server]
+port = 8443
+uri = "/pad"
+metrics = true
+log_level = "info"
+
+[network]
+iface = "eth0"
+sample_interval = 1.0
+smooth_window = 1.5
+
+[proxy]
+threshold = 100.0
+exit_time = 10
+ratio = 2.0
+maxspeed = 10000.0
+minspeed = 100.0
+
+[idle]
+smin = 50
+smax = 200
+tmin = 5
+tmax = 30
+pmin = 10
+pmax = 60
+
+[auth]
+enabled = false
